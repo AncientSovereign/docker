@@ -1,7 +1,7 @@
 # Pi-hole configuration file (v6.2.3)
 # Encoding: UTF-8
 # This file is managed by pihole-FTL
-# Last updated on 2025-08-16 15:04:51 MST
+# Last updated on 2025-08-16 16:43:26 MST
 
 [dns]
   # Array of upstream DNS servers used by Pi-hole
@@ -10,8 +10,8 @@
   # Possible values are:
   #     array of IP addresses and/or hostnames, optionally with a port (#...)
   upstreams = [
-    "8.8.8.8",
-    "8.8.4.4"
+    "1.1.1.1",
+    "1.0.0.1"
   ] ### CHANGED, default = []
 
   # Use this option to control deep CNAME inspection. Disabling it might be beneficial
@@ -834,7 +834,7 @@
     #
     # Possible values are:
     #     <valid Pi-hole password hash>
-    app_pwhash = ""
+    app_pwhash = "$BALLOON-SHA256$v=1$s=1024,t=32$+MnpHa5QMDavgiDHKy+eNw==$4tNJ4vq5SnZ2qy6pcjwMGFF2i/t0WVl9/kQXMO8TYrQ=" ### CHANGED, default = ""
 
     # Should application password API sessions be allowed to modify config settings?
     # Setting this to true allows third-party applications using the application password
@@ -1196,6 +1196,6 @@
   all = false
 
 # Configuration statistics:
-# 155 total entries out of which 152 entries are default
-# --> 3 entries are modified
+# 155 total entries out of which 151 entries are default
+# --> 4 entries are modified
 
